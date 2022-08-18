@@ -1,0 +1,48 @@
+WBMsedNEWS1.1 - 6/20/2013 - The Psi equation was calibrated - the c coefficient first term was changed from 1.4 to 0.25. 
+
+WBMsed4.0 (Feb 2019):
+	Mean Discharge module (MDDicshargeMean.c) used Qbf module (MDDischargeBFDef)
+	In MDRiverbedShapeExp.c changed from MeanDischarge do MDDischargeBFDef for velocity calculation
+	Changed riverbed width and depth coefficients 
+
+	(March 2019):
+	In MDRiverbedShapeExp.c changed from MeanDischarge do MDDischargeBFDef for velocity calculation
+	Add a velocity trashold parameter in bedload module 
+
+WBMsed4.1 (April-May 2019):
+	Bedload module (MDBedloadFlux.c) - new coeefficient values for the modified Bagnold eq.
+					   Added 3 bedload equations 
+
+WBMsed4.1.1 (Oct 2019):
+	Bedload module (MDBedloadFlux.c) - Added Syvitski et al. (2019) bedload equation 
+
+4.1.2 (Feb 2020):
+	New bedload equations (MDBedloadFlux.c) - Ashley, and Lammers and ### (2018)
+	Discharge_w_bankful - allow no bankfull Q by setting very high value (1,000,000)
+
+4.1.3 (Apr 2020):
+	Updated Ashley bedload and Ds equations (MDBedloadFlux.c)
+4.2.0 (Aug 2020):
+	Add Sediment trapping input option (Grill et al. 2019 dataset)	
+4.3.0 (Jun 2021):
+	Created a separate suspended bed module (Syvitski) and added TotalLoad parameter	
+4.3.3 (June 2021:
+	Fixed Te by weighting it by A instead of Q
+4.3.4 (June 2021):
+	Calculating Psi with an empirical adjustment to Cbar. 
+	Calculating average T with AvgNSteps so no need for Mean Input layers.
+4.3.5 (June 2021):
+	Mean Discharge calculated within SedimentFlux instead of MeanDischarge; 
+	Modified bankfull component within Discharge_w_bankfull.
+4.3.6 (July 1 2021):
+	Mean discharge is calculated with DischargeMean module (not within sediment) 
+4.3.7 (Sep 7 2021):
+	Calculate wash load (Qs-SBM), changed water density to wash load?)
+4.3.8 (Oct 1 2021):
+	Calculate daily velocity within SBM module 
+4.3.9 (Oct 13 2021):
+	Calculate particle size (Ds) in the bedlam module as a function of suspended sediment alone (remove Ashly's bedload)
+4.4.0 (Oct 21 2021):
+	Add Contributing Area as an input layer instead of calculated.
+4.4.1 (Oct 25 2021):
+	New Ds, W and depth equations used (From Tom Ashley's data) for bedload and SBM modules. 
