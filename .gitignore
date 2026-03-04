@@ -1,0 +1,11 @@
+# Object files
+*.o
+
+# Libraries
+*.a
+
+# Executables
+*.bin
+
+# Emacs backups
+*~
