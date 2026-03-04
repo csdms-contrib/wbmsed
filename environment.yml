@@ -1,0 +1,8 @@
+# An environment to develop, build, test, and document WBMsed.
+name: wbmsed
+channels:
+  - conda-forge
+dependencies:
+  - c-compiler
+  - make
+  - cmake
