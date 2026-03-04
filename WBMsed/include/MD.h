@@ -1147,7 +1147,7 @@ int MDDINDef();					// RJS 042513
 int MDDOCDef();                         // RJS 011914
 int MDSpecCondDef();                    // SZ 061014
 int MDChlorideDef();                    // SZ 061614
-int MDNitrgoenInputsDef();		// RJS 042513
+int MDNitrogenInputsDef();		// RJS 042513
 int MDDischargeDef();
 int MDDischargeBFDef();
 int MDDischLevel1Def();
