@@ -3,9 +3,9 @@ INC    = ../include
 SRC    = ../src
 OBJ    = ../obj
 BIN    = ../bin
-CC     = gcc $(UNIXCCOPS) -I$(INC) -I$(GHAASDIR)/include
+CC     = gcc $(UNIXCCOPS) -I$(INC) -I$(CMDIR)/include -I$(MFDIR)/include
 LINK   = gcc
-LIBS   = -L$(GHAASDIR)/lib -lMF30 -lCM30 $(UNIXLIBS)
+LIBS   = -L$(CMDIR)/lib -L$(MFDIR)/lib -lMF10 -lCM10 $(UNIXLIBS)
 
 TARGET = $(BIN)/wbmsed.bin
 
