@@ -120,7 +120,7 @@ OBJS = $(OBJ)/WBMMain.o\
 all: ${TARGET}
 
 clean:
-	rm $(TARGET) $(OBJS)
+	rm -f $(TARGET) $(OBJS)
 
 $(TARGET): $(OBJS) $(SRC)/Makefile
 	$(LINK) $(OBJS) $(LIBS) -o $(TARGET)
