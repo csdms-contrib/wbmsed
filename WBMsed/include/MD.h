@@ -1237,6 +1237,7 @@ int MDRainWaterSurplusDef();
 int MDRainSMoistChgLayeredSoilDef();
 /* PET & Related Functions */
 int MDRelativeHumidityDef();
+int MDSpecificHumidityDef();
 int MDCloudCoverDef();
 int MDWetBulbTempDef();
 
