@@ -104,7 +104,7 @@ static void _MDRainSMoistChg (int itemID) {
 	if (_MDOutLiquidSoilMoistureID != MFUnset) MFVarSetFloat (_MDOutLiquidSoilMoistureID,itemID, sMoist/awCap);
 }
 
-enum { MFnone, MFcalculate };
+// enum { MFnone, MFcalculate };
 
 int MDRainSMoistChgDef () {
 	int ret = 0;
