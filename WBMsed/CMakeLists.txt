@@ -108,14 +108,14 @@ set(sources
     src/MDSuspendedBadFlux.c
 )
 
-link_directories(${GHAASDIR}/lib)
+link_directories($ENV{GHAASDIR}/lib)
 
 set(wbmsed_executable wbmsed.bin)
 add_executable(${wbmsed_executable} ${sources})
 target_link_libraries(${wbmsed_executable} MF30 CM30 m -pthread)
 target_include_directories(${wbmsed_executable} PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include
-    ${GHAASDIR}/include
+    $ENV{GHAASDIR}/include
 )
 
-install(TARGETS ${wbmsed_executable} RUNTIME DESTINATION ghaas/bin)
+install(TARGETS ${wbmsed_executable} RUNTIME DESTINATION $ENV{GHAASDIR}/bin)

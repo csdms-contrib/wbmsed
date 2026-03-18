@@ -6,9 +6,11 @@ project(wbmsed
   LANGUAGES C
 )
 
-set(GHAASDIR $ENV{HOME}/tmp/_install/ghaas)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -Wall -fsigned-char -D_GNU_SOURCE")
+if(NOT DEFINED ENV{GHAASDIR})
+  message(FATAL_ERROR "Environment variable GHAASDIR is not set.")
+endif()
+message(STATUS "GHAASDIR = $ENV{GHAASDIR}")
 
-message(STATUS "GHAASDIR = ${GHAASDIR}")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -Wall -fsigned-char -D_GNU_SOURCE")
 
 add_subdirectory(WBMsed)
