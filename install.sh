@@ -6,7 +6,7 @@ if [ ! -d "$GHAASDIR" ]; then
     exit 1
 fi
 
-build_dir=_build
+build_dir=/tmp/wbmsed_build
 
 cmake -B $build_dir --fresh -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$GHAASDIR
 cmake --build $build_dir
