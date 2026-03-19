@@ -4,5 +4,10 @@ channels:
   - conda-forge
 dependencies:
   - c-compiler
+  - cxx-compiler
   - make
   - cmake
+  - shapelib
+  - netcdf4
+  - udunits2
+  - gdal

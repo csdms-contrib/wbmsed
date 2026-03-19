@@ -1,0 +1,121 @@
+# WBMsed model
+
+set(sources
+    src/WBMMain.c
+    src/MDAccBalance.c
+    src/MDAccumulate.c
+    src/MDAvgNSteps.c
+    src/MDBaseFlow.c
+    src/MDBgc.c
+    src/MDBgcDOC.c
+    src/MDBgcDIN.c
+    src/MDBgcDINPlusBiomass.c
+    src/MDBgcFecal.c
+    src/MDBgcRiverLight.c
+    src/MDBgcRiverGPP.c
+    src/MDDIN.c
+    src/MDDO2.c
+    src/MDNitrogenInputs.c
+    src/MDCParams.c
+    src/MDDischarge.c
+    src/MDDischLevel1.c
+    src/MDDischLevel2.c
+    src/MDDischLevel3.c
+    src/MDDischLevel3Accum.c
+    src/MDDischLevel3Cascade.c
+    src/MDDischLevel3Muskingum.c
+    src/MDDischLevel3MuskingumCoeff.c
+    src/MDDischMean.c
+    src/MDEnergyDemand.c
+    src/MDEvapotransp.c
+    src/MDGrossRad.c
+    src/MDLandCover.c
+    src/MDLSAreaIndex.c
+    src/MDIrrGrossDemand.c
+    src/MDIrrRefET.c
+    src/MDIrrRefETHamon.c
+    src/MDIrrRefETFAO.c
+    src/MDIrrSoilMoisture.c
+    src/MDIrrSoilMoistChg.c
+    src/MDIrrUptakeRiver.c
+    src/MDIrrigatedArea.c
+    src/MDIrrUptakeGrdWater.c
+    src/MDPrecipitation.c
+    src/MDPermafrost.c
+    src/MDRainInfiltration.c
+    src/MDRainIntercept.c
+    src/MDRainPotET.c
+    src/MDRainPotETHamon.c
+    src/MDRainPotETJensen.c
+    src/MDRainPotETPstd.c
+    src/MDRainPotETPsTaylor.c
+    src/MDRainPotETPMday.c
+    src/MDRainPotETPMdn.c
+    src/MDRainPotETSWGday.c
+    src/MDRainPotETSWGdn.c
+    src/MDRainSMoistChg.c
+    src/MDRainSMoistLayered.c
+    src/MDRainPotETTurc.c
+    src/MDRainSurfRunoff.c
+    src/MDRainWaterSurplus.c
+    src/MDPotETlib.c
+    src/MDRelHumidity.c
+    src/MDReservoirs.c
+    src/MDRiverbedShapeExp.c
+    src/MDRiverWidth.c
+    src/MDRunoff.c
+    src/MDRunoffMean.c
+    src/MDRunoffVolume.c
+    src/MDSPackChg.c
+    src/MDSmallReservoirs.c
+    src/MDSmallReservoirCap.c
+    src/MDSolarRad.c
+    src/MDSoilAvailWaterCap.c
+    src/MDSMoistChg.c
+    src/MDSurfRunoff.c
+    src/MDSurfRunoffPool.c
+    src/MDStormRunoff.c
+    src/MDWaterBalance.c
+    src/MDWetDays.c
+    src/MDWetlands.c
+    src/MDWetlandArea.c
+    src/MDWind.c
+    src/MDWTempRiver.c
+    src/MDWTempRiverRoute.c
+    src/MDWTempGrdWater.c
+    src/MDWTempSurfRunoff.c
+    src/MDWTempSurfRunoffPool.c
+    src/MDThermalInputs.c
+    src/MDThermalInputs2.c
+    src/MDThermalInputs3.c
+    src/MDWWTP.c
+    src/MDIrrigation.c
+    src/MDDOC.c
+    src/MDLitterFall.c
+    src/MDHydropower.c
+    src/MDSpecCond.c
+    src/MDChloride.c
+    src/MDSedimentFlux.c
+    src/hydroran2.c
+    src/MDBedloadFlux.c
+    src/MDDischarge_w_overbank.c
+    src/MDWaterDensity.c
+    src/MDParticulateNutrients.c
+    src/MDWetBulbTemp.c
+    src/MDCloudCover.c
+    src/MDSpecificHumidity.c
+    src/MDRelativeHumidity.c
+    src/MDSuspendedBadFlux.c
+)
+
+link_directories($ENV{GHAASDIR}/lib)
+
+set(wbmsed_executable wbmsed.bin)
+add_executable(${wbmsed_executable} ${sources})
+target_link_libraries(${wbmsed_executable} MF30 CM30 m -pthread)
+target_include_directories(${wbmsed_executable} PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    $ENV{GHAASDIR}/include
+)
+
+install(TARGETS ${wbmsed_executable} RUNTIME DESTINATION $ENV{GHAASDIR}/bin)
