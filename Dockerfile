@@ -10,6 +10,6 @@ RUN apt-get update && \
     apt-get -y install make cmake git clang && \
     apt-get autoclean && apt-get purge
 
-RUN git clone --depth 1 --branch mdpiper/containerize-with-docker https://github.com/csdms-contrib/wbmsed /opt/wbmsed
+RUN git clone --depth 1 --branch v4.4.2 https://github.com/csdms-contrib/wbmsed /opt/wbmsed
 WORKDIR /opt/wbmsed
 RUN GHAASDIR=/usr/local/share/ghaas /opt/wbmsed/install.sh
