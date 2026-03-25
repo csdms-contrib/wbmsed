@@ -10,3 +10,8 @@ More detail on WBMsed can be found in
 [Cohen *et al.* (2013)](http://dx.doi.org/10.1016/j.cageo.2011.08.011)
 and at Prof. Cohen's research website,
 [Global Sediment and Water Discharge Modeling](https://sdml.ua.edu/models/global-sediment-flux-modeling/).
+
+## Contact information
+
+See the [WBMsed](https://csdms.colorado.edu/wiki/Model:WBMsed) page
+in the [CSDMS Model Repository](https://csdms.colorado.edu/wiki/Model_download_portal).
