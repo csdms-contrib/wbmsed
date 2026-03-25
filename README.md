@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7012895.svg)](https://doi.org/10.5281/zenodo.7012895)
+
 # WBMsed
 
 WBMsed is a distributed global sediment flux and water discharge model
