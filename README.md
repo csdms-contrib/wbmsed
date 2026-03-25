@@ -15,7 +15,8 @@ and at Prof. Cohen's research website,
 
 WBMsed can be built and installed on Linux and macOS.
 It requires an installation of the
-[Global Hydrological Archive and Analysis System](https://wsag.unh.edu/toolsTop.html) (GHAAS).
+[Global Hydrological Archive and Analysis System](https://wsag.unh.edu/toolsTop.html) (GHAAS),
+with the `GHAASDIR` environment variable set to the install location.
 The build system is CMake,
 and an [install script](./install.sh) is provided.
 
