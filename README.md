@@ -32,7 +32,7 @@ or simply download the Docker Compose file, [`compose.yaml`](./compose.yaml), fr
 From the directory that contains the Docker Compose file,
 start a container:
 ```sh
-docker compose run -it csdms/wbmsed
+docker compose run --rm csdms/wbmsed
 ```
 Interactive shell access is provided to WBMsed and its run scripts in `/opt/wbmsed`.
 The local current working directory is mounted to the container at `/work`,
