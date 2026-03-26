@@ -10,4 +10,5 @@ services:
     image: csdms/wbmsed
     stdin_open: true
     volumes:
-      - .:/opt/wbmsed
+      - .:/work
+    working_dir: /work
