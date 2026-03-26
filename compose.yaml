@@ -1,0 +1,13 @@
+# Docker Compose file for WBMsed.
+#
+# Run the container:
+#   docker compose run --rm wbmsed
+
+name: wbmsed-model
+
+services:
+  wbmsed:
+    image: csdms/wbmsed
+    stdin_open: true
+    volumes:
+      - .:/opt/wbmsed
