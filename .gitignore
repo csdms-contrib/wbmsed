@@ -1,0 +1,14 @@
+# Object files
+*.o
+
+# Libraries
+*.a
+
+# Executables
+*.bin
+
+# Emacs backups
+*~
+
+# CMake build files
+_build/
