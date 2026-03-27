@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [4.4.2] — 2026-03-27
+
+The updates in this tagged version only apply to the WBMsed repository, not the model.
+
+* Updated the directory structure of the repository
+* Converted the build system from GNU Make to CMake
+* Containerized the model with Docker and Docker Compose
+* Added a README with information and links
+
 ## [4.4.1] — 2021-10-25
 
 * Implemented new $D_s$, $W$, and depth equations derived from Tom Ashley's data for both bedload and SBM modules. 
