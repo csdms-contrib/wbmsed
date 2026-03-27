@@ -34,7 +34,7 @@ start a container:
 ```sh
 docker compose run --rm csdms/wbmsed
 ```
-Interactive shell access is provided to WBMsed and its run scripts in `/opt/wbmsed`.
+Interactive shell access is provided for WBMsed and its run scripts in `/opt/wbmsed`.
 The local current working directory is mounted to the container at `/work`,
 allowing access to local data.
 Additional software (e.g., *vim*) can be installed into the container with `apt`.
