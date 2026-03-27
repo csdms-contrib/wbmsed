@@ -11,5 +11,6 @@ RUN apt-get update && \
     apt-get autoclean && apt-get purge
 
 RUN git clone --depth 1 --branch v4.4.2 https://github.com/csdms-contrib/wbmsed /opt/wbmsed
-WORKDIR /opt/wbmsed
 RUN GHAASDIR=/usr/local/share/ghaas /opt/wbmsed/install.sh
+
+WORKDIR /opt/wbmsed

@@ -11,12 +11,12 @@ More detail on WBMsed can be found in
 and at Prof. Cohen's research website,
 [Global Sediment and Water Discharge Modeling](https://sdml.ua.edu/models/global-sediment-flux-modeling/).
 
-## Build and install
+## Use
 
 WBMsed can be built and installed on Linux and macOS.
 It requires an installation of the
 [Global Hydrological Archive and Analysis System](https://wsag.unh.edu/toolsTop.html) (GHAAS),
-with the `GHAASDIR` environment variable set to the install location.
+with the `GHAASDIR` environment variable set to its install location.
 The build system is CMake,
 and an [install script](./install.sh) is provided.
 
@@ -26,10 +26,19 @@ Pull [the latest version of WBMsed](https://hub.docker.com/r/csdms/wbmsed) from 
 ```sh
 docker pull csdms/wbmsed
 ```
-then start a container to access the scripts that control the model:
+
+Clone this GitHub repository,
+or simply download the Docker Compose file, [`compose.yaml`](./compose.yaml), from it.
+From the directory that contains the Docker Compose file,
+start a container:
 ```sh
-docker run -it csdms/wbmsed
+docker compose run --rm csdms/wbmsed
 ```
+Interactive shell access is provided to WBMsed and its run scripts in `/opt/wbmsed`.
+The local current working directory is mounted to the container at `/work`,
+allowing access to local data.
+Additional software (e.g., *vim*) can be installed into the container with `apt`.
+
 
 ## Contact information
 
